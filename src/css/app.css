@@ -24,7 +24,7 @@ body {
 	max-width: 750px;
 }
 #app h1 {
-	color: var(--black);
+	color: #FFF;
 	font-family: Shift-BoldItalic, serif;
 	font-size: 2rem;
 	margin-bottom: 0.5rem;

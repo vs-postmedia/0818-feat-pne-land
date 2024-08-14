@@ -18,10 +18,6 @@
 	src: local('BentonSansCond-Regular'), url('../../fonts/BentonSansCond-Regular.otf') format('opentype');
 }
 @font-face {
-	font-family: 'BentonSansCond-RegItalic';
-	src: local('BentonSansCond-RegItalic'), url('../../fonts/BentonSansCond-RegItalic.otf') format('opentype');
-}
-@font-face {
 	font-family: 'BentonSansCond-Bold';
 	src: local('BentonSansCond-Bold'), url('../../fonts/BentonSansCond-Bold.otf') format('opentype');
 }

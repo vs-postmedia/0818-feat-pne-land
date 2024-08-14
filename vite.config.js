@@ -12,7 +12,8 @@ export default defineConfig({
       "$data": path.resolve("./src/data"),
 	    "$css": path.resolve("./src/css"),
 	    "$fonts": path.resolve("./static/fonts"),
-      "$images": path.resolve("./src/images")
+      "$images": path.resolve("./src/images"),
+      "$video": path.resolve("./src/video"),
     }
   }
 });
