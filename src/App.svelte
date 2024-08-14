@@ -209,11 +209,12 @@
         padding: 1px 10px 5px 10px;
     }
     #app .section h2 {
+        font-size: 1.1rem;
         margin-top: 15px;
     }
     #app .section p.section-subhead {
         color: var(--grey01);
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
     #app footer p {
         background-color: rgba(0,0,0,0.4);
