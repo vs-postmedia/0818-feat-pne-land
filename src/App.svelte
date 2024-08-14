@@ -6,6 +6,7 @@
 
     // DATA
     const videoUrl = 'src/video/pne-flyover-labels-lores.mp4';
+    const videoUrlWebm = 'src/video/pne-flyover-labels-lores.webm';
 
     // VARIABLES
     let data, videoElement;
@@ -76,7 +77,11 @@
 </header>
 
 <div class="video-container">
-    <video bind:this={videoElement} src={videoUrl}></video>
+    <!-- svelte-ignore a11y-media-has-caption -->
+    <video bind:this={videoElement} preload="auto">
+        <source src={videoUrl} type="video/mp4">
+        <source src={videoUrlWebm} type="video/webm">
+    </video>
 </div>  
 
 <div id="scrollytelling">
@@ -144,7 +149,7 @@
 </main>
 
 <footer>
-    <p class="source">Source:  <a href="https:vancouversun.com" target="_blank">TK</a></p>
+    <p class="source">Source: City of Vancouver, PNE, HastingsPark1942.ca</p>
 </footer>
   
 <style>
@@ -191,6 +196,7 @@
         left: 50%;
         transform: translate(-50%, -50%); Center the video */
     }
+
     .section {
         /* border: 1px solid red; */
         height: 100vh;
@@ -202,13 +208,7 @@
         max-width: 600px;
         margin: 0 auto;
     }
-    .sectionX {
-        border: 1px solid red;
-        height: 100vh;
-        padding: 20px;
-    }
-    .section .copy,
-    .sectionX .copy {
+    .section .copy {
         background-color: rgba(255, 255, 255, 0.75);
         padding: 1px 10px 5px 10px;
     }
@@ -218,5 +218,16 @@
     #app .section p.section-subhead {
         color: var(--grey01);
         font-size: 0.9rem;
+    }
+
+    @media only screen and (min-width: 400px) {
+        header {
+            margin: 0 auto;
+            max-width: 360px;
+        }
+        #scrollytelling {
+            margin: 0 auto;
+            max-width: 360px;
+        }
     }
 </style>
