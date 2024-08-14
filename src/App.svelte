@@ -149,7 +149,7 @@
 </main>
 
 <footer>
-    <p class="source">Source: City of Vancouver, PNE, HastingsPark1942.ca</p>
+    <p class="source">Source: Pacific National Exhibition, HastingsPark1942.ca, Google Earth, City of Vancouver</p>
 </footer>
   
 <style>
@@ -198,13 +198,9 @@
     }
 
     .section {
-        /* border: 1px solid red; */
         height: 100vh;
         padding: 20px;
-        /* display: flex; */
         justify-content: center;
-        /* align-items: center; */
-        /* text-align: center; */
         max-width: 600px;
         margin: 0 auto;
     }
@@ -218,6 +214,11 @@
     #app .section p.section-subhead {
         color: var(--grey01);
         font-size: 0.9rem;
+    }
+    #app footer p {
+        background-color: rgba(0,0,0,0.4);
+        color: #FFF;
+        padding: 5px;
     }
 
     @media only screen and (min-width: 400px) {
