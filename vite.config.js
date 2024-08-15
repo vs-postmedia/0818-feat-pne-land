@@ -4,7 +4,9 @@ import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/svelte-template/',
+  // base: '/0818-feat-pne-land/',
+  // base: '/',
+  base: process.env.MODE === 'production' ? '/0818-feat-pne-land/' : '/',
   plugins: [svelte()],
   resolve: {
     alias: {
@@ -13,7 +15,7 @@ export default defineConfig({
 	    "$css": path.resolve("./src/css"),
 	    "$fonts": path.resolve("./static/fonts"),
       "$images": path.resolve("./src/images"),
-      "$video": path.resolve("./src/video"),
+      "$video": path.resolve("./public/video"),
     }
   }
 });

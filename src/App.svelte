@@ -1,12 +1,17 @@
 <script>
     // COMPONENTS
     import { onMount } from 'svelte';
-    import { csvParse } from 'd3-dsv';
     import Scrollama from 'scrollama';
 
-    // DATA
-    const videoUrl = 'src/video/pne-flyover-labels-lores.mp4';
-    const videoUrlWebm = 'src/video/pne-flyover-labels-lores.webm';
+    // VIDEO
+    const videoPath = import.meta.env.MODE === 'production' ? './video' : '/video';
+    const videoUrl = `${videoPath}/pne-flyover-labels-lores.mp4`;
+    const videoUrlWebm = `${videoPath}/pne-flyover-labels-lores.webm`;
+
+
+    $: console.log('Environment:', import.meta.env);
+    $: console.log('MODE:', import.meta.env.MODE);
+    $: console.log(videoUrl)
 
     // VARIABLES
     let data, videoElement;
@@ -223,7 +228,8 @@
     }
 
     @media only screen and (min-width: 400px) {
-        header {
+        header,
+        footer {
             margin: 0 auto;
             max-width: 360px;
         }
